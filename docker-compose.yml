@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    command: npm run dev
+    ports:
+      - "3333:3333"
+    volumes:
+      - .:/app
+  db:
+    image: postgres:latest # use latest version of mysql
+    container_name: db # add a name for the container
+    restart: always
+    environment: 
+      POSTGRES_USER: umbriel
+      POSTGRES_PASSWORD: 12345678
+      POSTGRES_DATABASE: umbriel_bhub 
+    ports:
+      - "5432:5432"
+  dbtest:
+    image: postgres:latest # use latest version of mysql
+    container_name: dbtest # add a name for the container
+    restart: always
+    environment: 
+      POSTGRES_USER: umbriel_test
+      POSTGRES_PASSWORD: 123456789
+      POSTGRES_DATABASE: umbriel_bhub_test 
+    ports:
+      - "5431:5432"
+   
+    

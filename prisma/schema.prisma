@@ -1,0 +1,56 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Client {
+  id               String           @id
+  email            String           @unique @db.VarChar(255)
+  full_name        String           @db.VarChar(255)
+  personal_phone   String           @db.VarChar(255)
+  personal_address String           @db.VarChar(255)
+  status_account   String           @db.VarChar(255)
+  create_at        DateTime
+  update_at        DateTime?
+  Company          Company[]
+  ClubSubscriber   ClubSubscriber[]
+
+  @@map("clients")
+}
+
+model Company {
+  id               String    @id
+  id_client        String
+  cnpj_number      String    @db.VarChar(255)
+  cnpj_address     String    @db.VarChar(255)
+  cnpj_phone       String    @db.VarChar(255)
+  declared_billing Decimal
+  status_company   String    @db.VarChar(255)
+  create_at        DateTime
+  update_at        DateTime?
+  client           Client    @relation(fields: [id_client], references: [id], onDelete: Cascade, onUpdate: Cascade)
+
+  @@unique([cnpj_number])
+  @@map("companies")
+}
+
+model ClubSubscriber {
+  id                String    @id
+  email             String    @db.VarChar(255)
+  full_name         String    @db.VarChar(255)
+  theme_content     String    @db.VarChar(255)
+  status_subscriber String    @db.VarChar(255)
+  create_at         DateTime
+  update_at         DateTime?
+  client            Client    @relation(fields: [email], references: [email], onDelete: Cascade, onUpdate: Cascade)
+
+  @@unique([email, theme_content])
+  @@map("club_subscribers")
+}
