@@ -13,7 +13,7 @@ Docker: Rode o comando "docker run build -t umbriel:v1 ."
 
 Apos ter criado a imagem do docker rode o comando "docker-composer up" para subir o app e os bancos de dados da aplicação.
 
-Rode o comando "npx prisma migrate dev" para criar tabelas dentro do banco.
+Em seguida use o comando "cd prisma" e dentro da pasta priam use o comando "npx prisma migrate dev" para criar tabelas dentro do banco.
 
 Ambiente de testes: Para rodar os testes unitarios rode o seguinte comando: "npm run test:uts"
 
