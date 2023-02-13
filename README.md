@@ -17,6 +17,6 @@ Para rodar os testes integração rode o seguinte comando: npm run test:its
 
 Ambiente de desenvolvimento: Comando npm install para instalar as dependências.
 
-Comando npm run dev para subir o app em desenvolvimento.
+Comando "npm run dev" para subir o app em desenvolvimento.
 
 Link para documentação da api: https://documenter.getpostman.com/view/9041801/2s935uH1GG
