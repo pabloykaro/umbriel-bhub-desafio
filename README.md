@@ -1,10 +1,9 @@
 #Project for B Hub
-
-##Este projeto é uma solução para o B Hub, com foco em simplificar e automatizar processos de clients empreendedores.
+Este projeto é uma solução para o B Hub, com foco em simplificar e automatizar processos de clients empreendedores.
 
 
 ##Requisitos:
-Nodejs 18.14.0 LTS
+- Nodejs 18.14.0 LTS
 
 
 ##Tutorial para instalação:
@@ -21,15 +20,16 @@ Instale as dependências do projeto com "npm install"
 
 3) Em seguida use o comando "cd prisma" e dentro da pasta prisma use o comando "npx prisma migrate dev" para criar tabelas dentro do banco.
 
-##Ambiente de testes: 
+###Ambiente de desenvolvimento:
+
+- Utilize o comando "npm run dev" para subir o app em desenvolvimento(localmente).
+
+###Ambiente de testes: 
 
 - Para rodar os testes unitarios rode o seguinte comando: "npm run test:uts"
 
 - Para rodar os testes integração rode o seguinte comando: "npm run test:its"
 
-##Ambiente de desenvolvimento:
 
-- Utilize o comando "npm run dev" para subir o app em desenvolvimento(localmente).
-
-##Link para documentação da api: 
+###Link para documentação da api: 
 https://documenter.getpostman.com/view/9041801/2s935uH1GG
