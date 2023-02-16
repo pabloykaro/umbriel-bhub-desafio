@@ -8,9 +8,11 @@ Este projeto é uma solução para o B Hub, com foco em simplificar e automatiza
 
 ## Tutorial para instalação:
 
-Primeiramente faça o clone do projeto via git.
+1) Primeiramente faça o clone do projeto via git.
 
-Instale as dependências do projeto com "npm install"
+2) Entre na pasta do projeto que foi clonado e nstale as dependências do projeto com "npm install"
+
+- Host da api: http://localhost:3333/ 
 
 ## Ambiente Docker: 
 
