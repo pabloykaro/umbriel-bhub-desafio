@@ -14,7 +14,7 @@ Instale as dependências do projeto com "npm install"
 
 ## Ambiente Docker: 
 
-1) Apos ter criado a imagem do docker rode o comando "docker-composer up" para subir o app e os bancos de dados de teste e desenvolvimento da aplicação.
+1) Utilize o comando "docker-composer up" para subir os bancos de dados de teste e desenvolvimento da aplicação.
 
 
 ### Ambiente de desenvolvimento:
