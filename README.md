@@ -14,15 +14,14 @@ Instale as dependências do projeto com "npm install"
 
 ## Ambiente Docker: 
 
-1) Rode o comando "docker run build -t umbriel:v1 ."
+1) Apos ter criado a imagem do docker rode o comando "docker-composer up" para subir o app e os bancos de dados de teste e desenvolvimento da aplicação.
 
-2) Apos ter criado a imagem do docker rode o comando "docker-composer up" para subir o app e os bancos de dados de teste e desenvolvimento da aplicação.
-
-3) Em seguida use o comando "cd prisma" e dentro da pasta prisma use o comando "npx prisma migrate dev" para criar tabelas dentro do banco.
 
 ### Ambiente de desenvolvimento:
 
-- Utilize o comando "npm run dev" para subir o app em desenvolvimento(localmente).
+1) Quando os bancos de dados estiverem on-line, utilize o comando "cd prisma" dentro da pasta do projeto no terminal e use o comando "npx prisma migrate dev" para criar tabelas dentro do banco.
+
+2) Utilize o comando "npm run dev" para subir o app em desenvolvimento(localmente).
 
 ### Ambiente de testes: 
 
